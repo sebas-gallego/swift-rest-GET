@@ -108,7 +108,7 @@ var helperNetwork = HelperNetwork()
     func getJsonRequestGET(){
         
         //Set text lbl
-        lblResponse.text = "Consultando información...."
+        lblResponse.text = "Requesting data...."
         
         //parameters for get , we need tag typeStore
         let parameters: Parameters = [ "typeStore" : "Hombre",]
@@ -126,17 +126,17 @@ var helperNetwork = HelperNetwork()
                     let JSONData = try JSONDecoder().decode(JSONResponseStore.self, from: response.data!)
                     
                     if(JSONData.success){
-                        self.lblResponse.text = "Respuesta: \(JSONData.stores)"
+                        self.lblResponse.text = "RTA: \(JSONData.stores)"
                     }else{
-                        self.lblResponse.text = "Respuesta: \(JSONData.message)"
+                        self.lblResponse.text = "RTA: \(JSONData.message)"
                     }
                     
                 } catch let jsonError {
-                    self.lblResponse.text = "Respuesta: \(jsonError)"
+                    self.lblResponse.text = "RTA: \(jsonError)"
                 }
                 
             case .failure(let error):
-                self.lblResponse.text = "Respuesta: \(error)"
+                self.lblResponse.text = "RTA: \(error)"
             }
         }
         
