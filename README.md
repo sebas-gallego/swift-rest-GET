@@ -23,9 +23,77 @@ end
 # Pasos
 
 - **HelperNetwork.swift**: Copiar archivo HelperNetwork, el cual contiene el método para consumir el servicio por medio de Alamofire.
+```swift
+//
+//  HelperNetwork.swift
+//  ExampleRestApi
+//
+//  Created by MacBook Pro on 20/11/20.
+//
 
+import Foundation
+import Alamofire
+
+public var  URL_API = "https://icenparty.pythonanywhere.com/icenPartyWeb/api/v1/"
+public var  GET_STORE = "doStore"
+public var  METHOD_GET: HTTPMethod = .get
+
+class HelperNetwork{
+    
+    //Example get json for method GET
+    func doRequest(urlString : String,
+                   parameters : Parameters,
+                   method : HTTPMethod,
+                   completion: @escaping (AFDataResponse <Any>)->()) {
+        
+        let url = URL.init(string: URL_API + urlString)
+        AF.request(url!, method: method, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON {
+            response in  completion(response)
+        }
+    }
+    
+}
+```
 - **BaseResponse.swift**: Copiar archivo BaseResponse, el cual contiene los modelos correspondientes a la información obtenida en la respuesta del servicio.
+```swift
+//
+//  BaseResponse.swift
+//  ExampleRestApi
+//
+//  Created by MacBook Pro on 20/11/20.
+//
+/*
+ BaseResponse se usa para crear todos los modelos que
+ necesitamos para la respuesta del servicio.
+ */
 
+import Foundation
+
+public struct Store : Codable{
+    var pk: Int
+    var fields: Fields
+}
+
+public struct Fields : Codable {
+    var file_img_home: String
+    var file_img_2: String
+    var file_img_3: String
+    var title: String
+    var subTitle: String
+    var description: String
+    var value: Int
+    var material: String
+    var color: String
+    var sizes_list: String
+    var brand: String
+}
+
+public struct JSONResponseStore: Codable {
+    var success:  Bool
+    var message:  String
+    var stores :  [Store]
+}
+``` 
 - **ViewController.swift**: En nuestro archivo viewController realizar el llamado de nuestro método doRequest
 al cual se le pasan los parámetros necesarios para obtener el json. 
 
@@ -78,4 +146,4 @@ var helperNetwork = HelperNetwork()
 </p>
 
 Quedo atento a cualquier inquietud,
-Saludos
+Saludos.
