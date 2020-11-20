@@ -1,0 +1,6 @@
+module Pods_ExampleRestApi {
+  umbrella header "Pods-ExampleRestApi-umbrella.h"
+
+  export *
+  module * { export * }
+}
