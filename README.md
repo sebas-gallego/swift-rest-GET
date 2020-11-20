@@ -1,8 +1,9 @@
 # Api-rest-swift
 
 Te presento una App muy simple donde se consume un servicio rest por medio del método GET y se presenta la información obtenida en nuestra vista principal.
-**Nota**:Este proyecto esta construido con CocoaPods para mas información ingresar a https://cocoapods.org.
-**Estructura PodFile**
+- **Nota:**
+Este proyecto esta construido con CocoaPods, para mas información ingresar a https://cocoapods.org.
+- **Estructura PodFile:**
 ```
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '8.0'
