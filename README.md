@@ -1,9 +1,10 @@
 # Consumo de API REST-GET en iOS Swift
 
-Te presento una App muy simple donde se consume un servicio rest por medio del método GET y se presenta la información obtenida en nuestra vista principal.
-- **Nota:**
-Este proyecto esta construido con CocoaPods, para mas información ingresar a https://cocoapods.org.
-- **Estructura PodFile:**
+I present a very simple App where a rest service is consumed through the GET method and the information obtained is presented in our main view.
+
+**Note:** This project is built with CocoaPods, for more information go to https://cocoapods.org.
+**PodFile structure:**
+
 ```swift
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '8.0'
@@ -20,9 +21,10 @@ target 'ExampleRestApi' do
 
 end
 ```
-# Pasos
+# Steps
 
-- **HelperNetwork.swift**: Copiar archivo HelperNetwork, el cual contiene el método para consumir el servicio por medio de Alamofire.
+-**HelperNetwork.swift**: Copy HelperNetwork file, which contains the method to consume the service through Alamofire.
+
 ```swift
 //
 //  HelperNetwork.swift
@@ -54,7 +56,7 @@ class HelperNetwork{
     
 }
 ```
-- **BaseResponse.swift**: Copiar archivo BaseResponse, el cual contiene los modelos correspondientes a la información obtenida en la respuesta del servicio.
+-** BaseResponse.swift **: Copy BaseResponse file, which contains the models corresponding to the information obtained in the service response.
 ```swift
 //
 //  BaseResponse.swift
@@ -94,8 +96,7 @@ public struct JSONResponseStore: Codable {
     var stores :  [Store]
 }
 ``` 
-- **ViewController.swift**: En nuestro archivo viewController realizar el llamado de nuestro método doRequest
-al cual se le pasan los parámetros necesarios para obtener el json. 
+- **ViewController.swift**: In our viewController file, call our doRequest method to which the necessary parameters are passed to obtain the json.
 
 ```swift
 @IBOutlet weak var lblResponse: UILabel!
@@ -145,5 +146,4 @@ var helperNetwork = HelperNetwork()
   <img src="https://icenparty.pythonanywhere.com/media/documents/documents/Captura_de_Pantalla_2020-11-20_a_las_1.35.33_p.m..png" width="350" alt="accessibility text">
 </p>
 
-Quedo atento a cualquier inquietud,
-Saludos.
+I remain attentive to any concerns, Cheers
