@@ -1,10 +1,10 @@
-# Api-rest-swift
+# Consumo de API REST-GET en iOS Swift
 
 Te presento una App muy simple donde se consume un servicio rest por medio del método GET y se presenta la información obtenida en nuestra vista principal.
 - **Nota:**
 Este proyecto esta construido con CocoaPods, para mas información ingresar a https://cocoapods.org.
 - **Estructura PodFile:**
-```
+```swift
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '8.0'
 
@@ -29,7 +29,7 @@ end
 - **ViewController.swift**: En nuestro archivo viewController realizar el llamado de nuestro método doRequest
 al cual se le pasan los parámetros necesarios para obtener el json. 
 
-```
+```swift
 @IBOutlet weak var lblResponse: UILabel!
 var helperNetwork = HelperNetwork()
     
