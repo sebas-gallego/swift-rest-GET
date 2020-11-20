@@ -1,4 +1,4 @@
-# Consumo de API REST-GET en iOS Swift
+# Request API REST-GET en iOS Swift
 
 I present a very simple App where a rest service is consumed through the GET method and the information obtained is presented in our main view.
 
