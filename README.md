@@ -73,6 +73,9 @@ var helperNetwork = HelperNetwork()
         
     }
 ```
+<p align="start">
+  <img src="https://icenparty.pythonanywhere.com/media/documents/documents/Captura_de_Pantalla_2020-11-20_a_las_1.35.33_p.m..png" width="350" alt="accessibility text">
+</p>
 
-Quedo atento a cualquier inquitud,
+Quedo atento a cualquier inquietud,
 Saludos
