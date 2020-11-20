@@ -2,8 +2,8 @@
 
 I present a very simple App where a rest service is consumed through the GET method and the information obtained is presented in our main view.
 
-**Note:** This project is built with CocoaPods, for more information go to https://cocoapods.org.
-**PodFile structure:**
+- **Note:** This project is built with CocoaPods, for more information go to https://cocoapods.org.
+- **PodFile structure:**
 
 ```swift
 # Uncomment the next line to define a global platform for your project
@@ -23,7 +23,7 @@ end
 ```
 # Steps
 
--**HelperNetwork.swift**: Copy HelperNetwork file, which contains the method to consume the service through Alamofire.
+- **HelperNetwork.swift**: Copy HelperNetwork file, which contains the method to consume the service through Alamofire.
 
 ```swift
 //
@@ -56,7 +56,7 @@ class HelperNetwork{
     
 }
 ```
--** BaseResponse.swift **: Copy BaseResponse file, which contains the models corresponding to the information obtained in the service response.
+- **BaseResponse.swift**: Copy BaseResponse file, which contains the models corresponding to the information obtained in the service response.
 ```swift
 //
 //  BaseResponse.swift
